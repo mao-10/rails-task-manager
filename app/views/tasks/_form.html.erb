@@ -1,0 +1,16 @@
+<div class="container">
+  <%= form_with model: task do |f| %>
+    <div class="d-flex flex-column m-5">
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+      <%= f.label :details %>
+      <%= f.text_area :details %>
+    </div>
+    <div class="m-5">
+      <%= f.submit class: "btn-add text-white text-center m-auto w-100"%>
+      <%if task.id %>
+        <%= check_box_tag :completed, 1, false %>
+      <%end%>
+    </div>
+  <% end %>
+</div>

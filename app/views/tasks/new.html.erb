@@ -1,0 +1,10 @@
+<div class="container">
+  <h1 class="text-white m-5">Add a Task</h1>
+  <%= render "form", task: @task %>
+  <%= link_to "Go back to list", tasks_path, style: "color: #254441;" %>
+</div>
+<%# #string :point_right: f.text_field :attribute_name
+text :point_right: f.text_area :attribute_name
+boolean :point_right: f.check_box :attribute_name
+integer :point_right: f.number_field :attribute_name
+label :point_right: f.label :attribute_name %>

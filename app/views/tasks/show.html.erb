@@ -1,0 +1,19 @@
+<div class="container m-5">
+  <h1 class="text-decoration-underline">Task</h1>
+  <div class="fs-3">
+    <%= @task.title%>
+  </div>
+  <div class="m-5">
+    <p>Details: <%= @task.details%></p>
+  </div>
+  <div class="">
+    <% if @task.completed%>
+      <i class="fa-regular fa-square-check text-center m-2"> Completed!</i>
+    <% else %>
+      <i class="fa-regular fa-square text-center m-2"> Not Completed</i>
+    <% end %>
+  </div>
+  <%=link_to "Edit Task", edit_task_path, style: "color: #254441;"%>
+  <%= link_to "Go back to list", tasks_path, style: "color: #254441;" %>
+  <%= link_to "Delete", task_path(@task), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, style: "color: #254441;"%>
+</div>
